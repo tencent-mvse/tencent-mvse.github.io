@@ -1,0 +1,284 @@
+<!DOCTYPE html>
+<html lang="zh-CN" style="overflow-y: visible;">
+  <head>
+    <title>Tencent-MVSE</title>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width,initial-scale=1.0,maximum-scale=1.0,user-scalable=0" />
+    <meta name="apple-mobile-web-app-capable" content="yes">
+    <meta name="apple-mobile-web-app-status-bar-style" content="black">
+    <link href="static/css/bootstrap.min.css" rel="stylesheet" media="screen">
+    <script src="static/js/jquery.min.js"></script>
+    <script src="static/js/bootstrap.min.js"></script>
+    <script src="static/js/run_prettify.js"></script>
+    <style type="text/css">
+      #jumbotron {
+        height: 600px;
+        background-image: url(static/img/front.png);
+        background-size: cover;
+        /*margin-top: -20px;*/
+        margin-bottom: 0px;
+        background-position: 80% 75%;
+        padding: 0;
+      }
+
+      .p-body {
+        text-align: justify;
+        font-family: "Arial", sans-serif;
+        font-size: 120%;
+      }
+
+      .timeline-li {
+        font-family: "Arial", sans-serif;
+        font-size: 120%;
+      }
+
+      .thumbnail {
+        border-color: transparent;
+        background-color: transparent;
+      }
+
+      .avatar {
+        border-radius: 50%;
+      }
+
+      #morning {
+        color: orange;
+      }
+
+      #block1 {
+        background-color: white;
+      }
+
+      #block2 {
+        background-color: #e8e8e8;
+      }
+
+      #block3 {
+        background-color: white;
+      }
+
+      #block4 {
+        background-color: #e8e8e8;
+      }
+
+      #block5 {
+        background-color: white;
+      }
+
+      #block6 {
+        background-color: #e8e8e8;
+      }
+
+      #block8 {
+        background-color: #080808;
+      }
+    </style>
+    <script type="text/javascript">
+
+    </script>
+  </head>
+  <body>
+    <nav class="navbar navbar-inverse">
+      <div class="container">
+        <div class="navbar-header">
+          <button class="navbar-toggle collapsed" data-toggle="collapse" data-target="#menu" aria-expanded="false">
+            <span class="icon-bar"></span><span class="icon-bar"></span><span class="icon-bar"></span>
+          </button>
+        </div>
+        <div class="collapse navbar-collapse" id="menu">
+          <ul class="nav navbar-nav navbar-right">
+            <li class="active"><a href="/2016">Dataset</a></li>
+            <li><a href="#">Explore</a></li>
+            <li><a href="#">Download</a></li>
+            <li><a href="#">About</a></li>
+          </ul>
+        </div>
+      </div>
+    </nav>
+
+    <div class="jumbotron" id="jumbotron">
+      <div class="mengban">
+        <center>
+          <br><br><br><br><br><br><br><br>
+          <h1 id="morning">Tencent-MVSE</h1>
+        </center>
+      </div>
+    </div>
+
+    <div class="container-fluid">
+      <div class="row" id="block1">
+        <div class="container">
+          <div class="col-xs-10 col-xs-offset-1">
+            <h2 class="p-title"><b>News</b></h2>
+            <ul>
+              <li class="timeline-li red"><b>[2022-03-02]</b>:Our paper has been accepted by CVPR 2022</li>
+            </ul>
+            <br>
+          </div>
+        </div>
+      </div>
+
+      <div class="row" id="block2">
+        <div class="container">
+          <div class="col-xs-10 col-xs-offset-1">
+            <h2 class="p-title"><b>Abstract</b></h2>
+            <p class="p-body">
+              Multi-modal video similarity evaluation is important for video recommendation systems such as video de-duplication, relevance matching, ranking, and diversity control.
+However, there still lacks a benchmark dataset that can support supervised training and accurate evaluation. In this paper, we propose the \tx dataset, which is the first benchmark dataset for the multi-modal video similarity evaluation task. 
+The \tx dataset contains video pairs similarity annotations, and diverse metadata including Chinese title, automatic speech recognition (ASR) text, as well as human-annotated categories/tags. 
+We provide a simple baseline with a multi-modal Transformer architecture to perform supervised multi-modal video similarity evaluation. We also explore pre-training strategies to make use of the unpaired data. The whole dataset as well as our baseline will be released to promote the development of the multi-modal video similarity evaluation.
+            </p>
+            <br>
+          </div>
+        </div>
+      </div>
+
+      <div class="row" id="block3">
+        <div class="container">
+          <div class="col-xs-10 col-xs-offset-1">
+            <h2 class="p-title"><b>Explore</b></h2>
+            
+
+          </div>
+        </div>
+      </div>
+
+      <div class="row" id="block4">
+        <div class="container">
+          <div class="col-xs-10 col-xs-offset-1">
+            <h2 class="p-title"><b>Statistics</b></h2>
+            <img width="100%" src="static/img/analysis.png">
+            <br><br>
+          </div>
+        </div>
+      </div>
+
+      <div class="row" id="block5">
+        <div class="container">
+          <div class="col-xs-10 col-xs-offset-1">
+            <h2 class="p-title"><b>Download</b></h2>
+            
+            <div class="row">
+              <div class="col-xs-4">
+                <h3>Data</h3>
+                <button class="btn btn-primary">Pointwise</button><br><br>
+                <button class="btn btn-primary">Pairwise</button><br><br>
+                <button class="btn btn-primary">Validation</button><br><br>
+                <button class="btn btn-primary">Test</button><br><br>
+              </div>
+              <div class="col-xs-4">
+                <h3>Paper</h3>
+                <button class="btn btn-primary">Arxiv</button><br><br>
+                  <pre class="prettyprint lang-cv">
+@inproceedings{zeng2019tencent,
+  title={Tencent-MVSE: A Large-Scale Benchmark Dataset for \\Multi-Modal Video Similarity Evaluation},
+  author={Zhaoyang Zeng, Yongsheng Luo, Zhenhua Liu, Fengyun Rao, Dian Li, Weidong Guo, Zhen Wen},
+  booktitle={Proceedings of the IEEE/CVF Conference on Computer Vision and Pattern Recognition},
+  year={2022}
+}
+                  </pre>
+
+              </div>
+              <div class="col-xs-4">
+                <h3>Code</h3>
+                <p class="p-body">https://github.com/</p>
+              </div>
+            </div>
+
+          </div>
+        </div>
+      </div>
+
+      <div class="row" id="block6">
+        <div class="container">
+          <div class="col-xs-10 col-xs-offset-1">
+            <h2 class="p-title"><b>Team</b></h2>
+            <br>
+            <div class="row">
+              <div class="col-xs-3">
+                <div class="thumbnail">
+                  <img src="static/img/zhaoyangzeng.jpg" width="100%" class="avatar">
+                  <div class="caption">
+                    <center>
+                      <h4>Zhaoyang Zeng</h4>
+                    </center>
+                    <p>
+                      <center>Tencent</center>
+                    </p>
+                    <p>
+                      <center><a href="mailto:bo.wu@columbia.edu">zhaoyanzeng@tencent.com</a></center>
+                    </p>
+                  </div>
+                </div>
+              </div>
+
+              <div class="col-xs-3">
+                <div class="thumbnail">
+                  <img src="static/img/zhaoyangzeng.jpg" width="100%" class="avatar">
+                  <div class="caption">
+                    <center>
+                      <h4>Zhaoyang Zeng</h4>
+                    </center>
+                    <p>
+                      <center>Tencent</center>
+                    </p>
+                    <p>
+                      <center><a href="mailto:bo.wu@columbia.edu">zhaoyanzeng@tencent.com</a></center>
+                    </p>
+                  </div>
+                </div>
+              </div>
+
+              <div class="col-xs-3">
+                <div class="thumbnail">
+                  <img src="static/img/zhaoyangzeng.jpg" width="100%" class="avatar">
+                  <div class="caption">
+                    <center>
+                      <h4>Zhaoyang Zeng</h4>
+                    </center>
+                    <p>
+                      <center>Tencent</center>
+                    </p>
+                    <p>
+                      <center><a href="mailto:bo.wu@columbia.edu">zhaoyanzeng@tencent.com</a></center>
+                    </p>
+                  </div>
+                </div>
+              </div>
+
+              <div class="col-xs-3">
+                <div class="thumbnail">
+                  <img src="static/img/zhaoyangzeng.jpg" width="100%" class="avatar">
+                  <div class="caption">
+                    <center>
+                      <h4>Zhaoyang Zeng</h4>
+                    </center>
+                    <p>
+                      <center>Tencent</center>
+                    </p>
+                    <p>
+                      <center><a href="mailto:bo.wu@columbia.edu">zhaoyanzeng@tencent.com</a></center>
+                    </p>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+
+
+
+      <div class="row" id="block8">
+        <div class="col-xs-10 col-xs-offset-1">
+          <center>
+            <h5 style="color:white;">Copyright © 2022. XXXX. All rights reserved.</h5>
+          </center>
+        </div>
+      </div>
+
+
+    </div>
+
+  </body>
+</html>
